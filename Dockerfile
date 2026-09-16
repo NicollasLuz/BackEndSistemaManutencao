@@ -1,5 +1,5 @@
-# Etapa 1: Build da aplicação com Gradle
-FROM gradle:8.5-jdk17 AS build
+# Etapa 1: Build da aplicação com a versão recente do Gradle
+FROM gradle:jdk17 AS build
 WORKDIR /app
 COPY . .
 RUN gradle bootJar --no-daemon -x test
