@@ -1,4 +1,10 @@
-# Compilação e Build do Maven
+# Compilação e Build do Gradle
+build/
+.gradle/
+bin/
+!gradle/wrapper/gradle-wrapper.jar
+
+# Compilação e Build do Maven (caso migre)
 target/
 !.mvn/wrapper/maven-wrapper.jar
 
