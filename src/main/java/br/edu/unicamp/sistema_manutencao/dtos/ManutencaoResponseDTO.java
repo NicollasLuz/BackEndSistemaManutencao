@@ -1,6 +1,7 @@
 package br.edu.unicamp.sistema_manutencao.dtos;
 
 import br.edu.unicamp.sistema_manutencao.entities.Manutencao;
+import br.edu.unicamp.sistema_manutencao.enums.PrioridadeManutecao;
 import br.edu.unicamp.sistema_manutencao.enums.StatusManutencao;
 import br.edu.unicamp.sistema_manutencao.enums.TipoManutencao;
 import java.math.BigDecimal;
@@ -10,6 +11,7 @@ public record ManutencaoResponseDTO(
     String defeito,
     TipoManutencao tipo,
     StatusManutencao status,
+    PrioridadeManutecao prioridade,
     BigDecimal custo,
     String servicoExecutado,
     ItemResumidoDTO item
@@ -20,6 +22,7 @@ public record ManutencaoResponseDTO(
             m.getDefeito(),
             m.getTipo(),
             m.getStatus(),
+            m.getPrioridade(),
             m.getCusto(),
             m.getServicoExecutado(),
             ItemResumidoDTO.fromEntity(m.getItem())
