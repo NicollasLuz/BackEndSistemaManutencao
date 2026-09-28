@@ -49,6 +49,8 @@ public class ManutencaoController {
         // Atualizar os status conforme regra de negócio
         item.setStatusAtual(StatusItem.EM_MANUTENCAO);
         manutencao.setStatus(StatusManutencao.EM_ANDAMENTO);
+
+        
         
         itemRepository.save(item);
         return ResponseEntity.ok(manutencaoRepository.save(manutencao));

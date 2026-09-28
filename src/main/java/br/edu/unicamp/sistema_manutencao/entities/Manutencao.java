@@ -1,5 +1,6 @@
 package br.edu.unicamp.sistema_manutencao.entities;
 
+import br.edu.unicamp.sistema_manutencao.enums.PrioridadeManutecao;
 import br.edu.unicamp.sistema_manutencao.enums.StatusManutencao;
 import br.edu.unicamp.sistema_manutencao.enums.TipoManutencao;
 import com.fasterxml.jackson.annotation.JsonIgnore;
@@ -37,8 +38,10 @@ public class Manutencao {
     
     @Enumerated(EnumType.STRING)
     private StatusManutencao status;
+    private PrioridadeManutecao prioridade;
 
     private BigDecimal custo;
+    
 
     // Getters e Setters
     public Long getId() { return id; }
@@ -76,6 +79,9 @@ public class Manutencao {
 
     public StatusManutencao getStatus() { return status; }
     public void setStatus(StatusManutencao status) { this.status = status; }
+
+    public PrioridadeManutecao getPrioridade() { return prioridade; }
+    public void setPrioridade(PrioridadeManutecao prioridade) { this.prioridade = prioridade; }
 
     public BigDecimal getCusto() { return custo; }
     public void setCusto(BigDecimal custo) { this.custo = custo; }
