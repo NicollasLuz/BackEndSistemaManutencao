@@ -77,10 +77,7 @@ public class Usuario implements UserDetails {
     public StatusUsuario getStatus() { return status; }
     public void setStatus(StatusUsuario status) { this.status = status; }
 
-    // ====================================================================
-    // --- MÉTODOS OBRIGATÓRIOS DO SPRING SECURITY (Interface UserDetails) ---
-    // ====================================================================
-
+    // --- MÉTODOS DO SPRING SECURITY (Interface UserDetails) ---
     @Override
     @JsonIgnore
     public Collection<? extends GrantedAuthority> getAuthorities() {
